@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>printAll</title>
+</head>
+<a th:href="@{'/'}">Domov</a>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th class="mdl-data-table__cell--non-numeric">Id</th>
+        <th class="mdl-data-table__cell--non-numeric">Názov</th>
+        <th class="mdl-data-table__cell--non-numeric">Národnosť</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="vehicle: ${vehicles}">
+        <td th:text="${vehicle.vehicleID}"></td>
+        <td th:text="${vehicle.name}"></td>
+        <td th:text="${vehicle.country}"></td>
+        <td><a th:href="@{'/vehicle/show/' + ${vehicle.vehicleID}}">Viac</a></td>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>printOne</title>
+</head>
+<a th:href="@{'/'}">Domov</a>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th class="mdl-data-table__cell--non-numeric">Id</th>
+        <th class="mdl-data-table__cell--non-numeric">Názov</th>
+        <th class="mdl-data-table__cell--non-numeric">Národnosť</th>
+        <th class="mdl-data-table__cell--non-numeric">Hodnota</th>
+        <th class="mdl-data-table__cell--non-numeric">Podvozok</th>
+        <th class="mdl-data-table__cell--non-numeric">Veža</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <td th:text="${vehicle.vehicleID}"></td>
+    <td th:text="${vehicle.name}"></td>
+    <td th:text="${vehicle.country}"></td>
+    <td th:text="${vehicle.value}"></td>
+    <td th:text="${vehicle.chassis.toString()}"></td>
+    <td th:text="${vehicle.largeTurret.toString()}"></td>
+    </tbody>
+</table>
+</body>
+</html>
